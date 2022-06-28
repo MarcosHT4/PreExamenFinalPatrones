@@ -1,2 +1,7 @@
-package ejercicio4;public interface IServer {
+package ejercicio4;
+
+public interface ICluster {
+
+    void serveUser(User user);
+
 }

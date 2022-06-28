@@ -1,2 +1,37 @@
-package ejercicio4;public class ServerOne {
+package ejercicio4;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ServerOne implements ICluster {
+
+    private List<User> userList;
+
+    public ServerOne() {
+
+        userList = new ArrayList<>();
+
+    }
+
+    public void showAllUsers() {
+
+        for(User user : userList) {
+
+            user.showInfo();
+
+        }
+
+    }
+
+
+    @Override
+    public void serveUser(User user) {
+
+        System.out.println("Añadiendo al usuario: " + user.getUserName() + " al ServerOne");
+        userList.add(user);
+        System.out.println("Usuarios totales: ");
+        this.showAllUsers();
+        System.out.println("/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*//*/*");
+
+    }
 }

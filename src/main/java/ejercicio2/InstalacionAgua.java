@@ -1,12 +1,12 @@
 package ejercicio2;
 
-public class InstalacionElectrica implements Instalacion {
+public class InstalacionAgua implements Instalacion {
 
     private int precio;
     private int duracionEnDias;
     private boolean esCompleta;
 
-    public InstalacionElectrica(int precio, int duracionEnDias, boolean esCompleta) {
+    public InstalacionAgua(int precio, int duracionEnDias, boolean esCompleta) {
         this.precio = precio;
         this.duracionEnDias = duracionEnDias;
         this.esCompleta = esCompleta;
@@ -39,7 +39,7 @@ public class InstalacionElectrica implements Instalacion {
     @Override
     public void realizarInstalacion() {
 
-        System.out.println("Instalación eléctrica realizada con éxito!");
+        System.out.println("Instalación de agua realizada con éxito!");
 
     }
 }

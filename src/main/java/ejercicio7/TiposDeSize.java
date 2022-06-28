@@ -1,2 +1,7 @@
-package ejercicio7;public class TiposDeSize {
+package ejercicio7;
+
+public enum TiposDeSize {
+
+    SMALL, MEDIUM, BIG
+
 }

@@ -1,20 +1,22 @@
 package ejercicio7;
 
-public class Laptop implements IComputadora{
+public class PC implements IComputadora{
 
     private String marca;
     private String modelo;
     private String procesador;
     private String sistemaOperativo;
 
-    private String size;
+    private Persona owner;
+    private TiposDeSize size;
 
-    public Laptop(String marca, String modelo, String procesador, String sistemaOperativo, String size) {
+    public PC(String marca, String modelo, String procesador, String sistemaOperativo, Persona owner, TiposDeSize size) {
         this.marca = marca;
         this.modelo = modelo;
         this.procesador = procesador;
         this.sistemaOperativo = sistemaOperativo;
         this.size = size;
+        this.owner = owner;
     }
 
     public String getMarca() {
@@ -49,18 +51,26 @@ public class Laptop implements IComputadora{
         this.sistemaOperativo = sistemaOperativo;
     }
 
-    public String getSize() {
+    public Persona getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Persona owner) {
+        this.owner = owner;
+    }
+
+    public TiposDeSize getSize() {
         return size;
     }
 
-    public void setSize(String size) {
+    public void setSize(TiposDeSize size) {
         this.size = size;
     }
 
     @Override
     public void recibirReparacion(IServicioTecnico servicioTecnico) {
 
-
+        servicioTecnico.repararComputadora(this);
 
     }
 }

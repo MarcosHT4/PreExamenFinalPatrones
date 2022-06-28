@@ -1,2 +1,7 @@
-package ejercicio1;public enum TipoDeArma {
+package ejercicio1;
+
+public enum TipoDeArma {
+
+    ESPADA, HACHA, ESCOPETA
+
 }

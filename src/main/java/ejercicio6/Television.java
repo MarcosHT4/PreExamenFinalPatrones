@@ -1,19 +1,22 @@
 package ejercicio6;
 
-public class Computadora implements IArtefactoElectronico{
+public class Television implements IArtefactoElectronico{
+
+
+
 
     private String marca;
     private String modelo;
-    private String sistemaOperativo;
-    private String procesador;
 
-    public Computadora(String marca, String modelo, String sistemaOperativo, String procesador) {
+    private boolean tienePantallaPlana;
+
+    private String resolucion;
+
+    public Television(String marca, String modelo, boolean tienePantallaPlana, String resolucion) {
         this.marca = marca;
         this.modelo = modelo;
-        this.sistemaOperativo = sistemaOperativo;
-        this.procesador = procesador;
-
-
+        this.tienePantallaPlana = tienePantallaPlana;
+        this.resolucion = resolucion;
     }
 
     public String getMarca() {
@@ -32,25 +35,28 @@ public class Computadora implements IArtefactoElectronico{
         this.modelo = modelo;
     }
 
-
-    public String getSistemaOperativo() {
-        return sistemaOperativo;
+    public boolean isTienePantallaPlana() {
+        return tienePantallaPlana;
     }
 
-    public void setSistemaOperativo(String sistemaOperativo) {
-        this.sistemaOperativo = sistemaOperativo;
+    public void setTienePantallaPlana(boolean tienePantallaPlana) {
+        this.tienePantallaPlana = tienePantallaPlana;
     }
 
-    public String getProcesador() {
-        return procesador;
+    public String getResolucion() {
+        return resolucion;
     }
 
-    public void setProcesador(String procesador) {
-        this.procesador = procesador;
+    public void setResolucion(String resolucion) {
+        this.resolucion = resolucion;
     }
+
+
 
     @Override
-    public void accept(IAplicacion aplicacion) {
+    public void recibirMantenimiento(IAplicacion aplicacion) {
+
+    aplicacion.recomendarMantenimiento(this);
 
     }
 }

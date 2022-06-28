@@ -1,12 +1,12 @@
 package ejercicio5;
 
-public class AplicacionIOS implements IAplicacionesMoviles{
+public class AplicacionWindowsPhone implements IAplicacionesMoviles{
 
     private String nombre;
     private double version;
     private boolean isLogged;
 
-    public AplicacionIOS(String nombre, double version) {
+    public AplicacionWindowsPhone(String nombre, double version) {
 
         this.nombre = nombre;
         this.version = version;
@@ -39,7 +39,7 @@ public class AplicacionIOS implements IAplicacionesMoviles{
 
         } else {
 
-            System.out.println("Realizando login en la aplicación IOS: " + nombre);
+            System.out.println("Realizando login en la aplicación Windows Phone: " + nombre);
             isLogged = true;
 
         }
@@ -51,7 +51,7 @@ public class AplicacionIOS implements IAplicacionesMoviles{
 
         if (isLogged) {
 
-            System.out.println("Realizando logout en la aplicación IOS: " + nombre);
+            System.out.println("Realizando logout en la aplicación Windows Phone: " + nombre);
             isLogged = false;
 
 
@@ -68,7 +68,7 @@ public class AplicacionIOS implements IAplicacionesMoviles{
 
         System.out.println("Generando reportes...");
         Thread.sleep(1000);
-        System.out.println("Reportes generados en la carpeta ios!");
+        System.out.println("Reportes generados en la carpeta windowsPhone!");
 
     }
 }

@@ -3,11 +3,11 @@ package ejercicio4;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServerOne implements ICluster {
+public class ServerTwo implements ICluster {
 
     private List<User> userList;
 
-    public ServerOne() {
+    public ServerTwo() {
 
         userList = new ArrayList<>();
 
@@ -27,8 +27,11 @@ public class ServerOne implements ICluster {
     @Override
     public void serveUser(User user) {
 
-        System.out.println("Añadiendo al usuario: " + user.getUserName());
+        System.out.println("Añadiendo al usuario: " + user.getUserName() + " al ServerTwo");
         userList.add(user);
+        System.out.println("Usuarios totales: ");
+        this.showAllUsers();
+        System.out.println("/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*//*/*");
 
     }
 }

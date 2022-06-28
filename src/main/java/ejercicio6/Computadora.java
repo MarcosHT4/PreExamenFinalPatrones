@@ -1,19 +1,19 @@
 package ejercicio6;
 
-public class Celular implements IArtefactoElectronico{
+public class Computadora implements IArtefactoElectronico{
 
     private String marca;
     private String modelo;
-    private double version;
     private String sistemaOperativo;
-    private boolean tieneBluetooth;
+    private String procesador;
 
-    public Celular(String marca, String modelo, double version, String sistemaOperativo, boolean tieneBluetooth) {
+    public Computadora(String marca, String modelo, String sistemaOperativo, String procesador) {
         this.marca = marca;
         this.modelo = modelo;
-        this.version = version;
         this.sistemaOperativo = sistemaOperativo;
-        this.tieneBluetooth = tieneBluetooth;
+        this.procesador = procesador;
+
+
     }
 
     public String getMarca() {
@@ -32,13 +32,6 @@ public class Celular implements IArtefactoElectronico{
         this.modelo = modelo;
     }
 
-    public double getVersion() {
-        return version;
-    }
-
-    public void setVersion(double version) {
-        this.version = version;
-    }
 
     public String getSistemaOperativo() {
         return sistemaOperativo;
@@ -48,16 +41,18 @@ public class Celular implements IArtefactoElectronico{
         this.sistemaOperativo = sistemaOperativo;
     }
 
-    public boolean isTieneBluetooth() {
-        return tieneBluetooth;
+    public String getProcesador() {
+        return procesador;
     }
 
-    public void setTieneBluetooth(boolean tieneBluetooth) {
-        this.tieneBluetooth = tieneBluetooth;
+    public void setProcesador(String procesador) {
+        this.procesador = procesador;
     }
 
     @Override
-    public void accept(IAplicacion aplicacion) {
+    public void recibirMantenimiento(IAplicacion aplicacion) {
+
+        aplicacion.recomendarMantenimiento(this);
 
     }
 }

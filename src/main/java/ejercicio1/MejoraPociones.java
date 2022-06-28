@@ -1,10 +1,10 @@
 package ejercicio1;
 
-public class MejoraEscudo extends MejoraHabilidad {
+public class MejoraPociones extends MejoraHabilidad {
 
 
 
-    public MejoraEscudo(Personaje personajeBase) {
+    public MejoraPociones(IPersonaje personajeBase) {
         super(personajeBase);
 
     }
@@ -14,24 +14,27 @@ public class MejoraEscudo extends MejoraHabilidad {
     @Override
     public void mejoraDeHabilidades() {
 
-        System.out.println("Aplicando la mejora de escudo!");
+        super.mejoraDeHabilidades();
+        System.out.println("Aplicando la mejora de pociones!");
 
-        setPuntosDefensa(getPuntosDefensa() + getPuntosDefensa()*35);
-        setPorcentajeDeArmadura(getPuntosAtaque() + getPorcentajeDeArmadura()*10);
-        setNivel(getNivel()*2);
+        setPuntosRegeneracion(getPuntosRegeneracion() + getPuntosRegeneracion()*80);
+
 
         System.out.println("Nuevo status: ");
         System.out.println("Nivel: " + getNivel());
+        System.out.print("Armas: ");
         for(TipoDeArma tipoDeArma : getArmas()) {
 
             System.out.print(tipoDeArma + ", ");
 
         }
+        System.out.println();
 
         System.out.println("Porcentaje de Armadura: " + getPorcentajeDeArmadura());
         System.out.println("Puntos de Ataque: " + getPuntosAtaque());
         System.out.println("Puntos de Defensa: " + getPuntosDefensa());
         System.out.println("Puntos de Regeneracion de Vida: " + getPuntosRegeneracion());
+
 
     }
 

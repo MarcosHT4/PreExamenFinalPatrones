@@ -1,13 +1,12 @@
 package ejercicio5;
 
-public class AplicacionAndroid implements IAplicacionesMoviles{
+public class AplicacionIOS implements IAplicacionesMoviles{
 
     private String nombre;
     private double version;
-
     private boolean isLogged;
 
-    public AplicacionAndroid(String nombre, double version) {
+    public AplicacionIOS(String nombre, double version) {
 
         this.nombre = nombre;
         this.version = version;
@@ -40,7 +39,7 @@ public class AplicacionAndroid implements IAplicacionesMoviles{
 
         } else {
 
-            System.out.println("Realizando login en la aplicación Android: " + nombre);
+            System.out.println("Realizando login en la aplicación IOS: " + nombre);
             isLogged = true;
 
         }
@@ -52,7 +51,7 @@ public class AplicacionAndroid implements IAplicacionesMoviles{
 
         if (isLogged) {
 
-            System.out.println("Realizando logout en la aplicación Android: " + nombre);
+            System.out.println("Realizando logout en la aplicación IOS: " + nombre);
             isLogged = false;
 
 
@@ -69,7 +68,7 @@ public class AplicacionAndroid implements IAplicacionesMoviles{
 
         System.out.println("Generando reportes...");
         Thread.sleep(1000);
-        System.out.println("Reportes generados en la carpeta Android!");
+        System.out.println("Reportes generados en la carpeta ios!");
 
     }
 }

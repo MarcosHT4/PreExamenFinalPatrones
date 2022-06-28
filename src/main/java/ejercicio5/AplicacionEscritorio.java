@@ -1,15 +1,15 @@
 package ejercicio5;
 
-public class AplicacionWeb implements IAplicacionesWebYEscritorio {
+public class AplicacionEscritorio implements IAplicacionesWebYEscritorio {
 
     private String name;
     private double release;
     private boolean tieneSesion;
 
-    public AplicacionWeb(String name, double release, boolean tieneSesion) {
+    public AplicacionEscritorio(String name, double release) {
         this.name = name;
         this.release = release;
-        this.tieneSesion = tieneSesion;
+        tieneSesion = false;
     }
 
     public String getName() {
@@ -46,10 +46,11 @@ public class AplicacionWeb implements IAplicacionesWebYEscritorio {
 
         } else {
 
-            System.out.println("Realizando sesion en la aplicación Web " + name);
+            System.out.println("Realizando sesion en la aplicación Escritorio: " + name);
             tieneSesion = true;
 
         }
+
 
     }
 
@@ -58,7 +59,7 @@ public class AplicacionWeb implements IAplicacionesWebYEscritorio {
 
         if(tieneSesion) {
 
-            System.out.println("Cerrando sesion en la aplicación Web: " + name);
+            System.out.println("Cerrando sesion en la aplicación Escritorio: " + name);
             tieneSesion = false;
 
 
@@ -69,6 +70,8 @@ public class AplicacionWeb implements IAplicacionesWebYEscritorio {
 
         }
 
+
+
     }
 
     @Override
@@ -76,7 +79,7 @@ public class AplicacionWeb implements IAplicacionesWebYEscritorio {
 
         System.out.println("Generando datos...");
         Thread.sleep(1000);
-        System.out.println("Datos generados en la consola!");
+        System.out.println("Datos generados en la carpeta Desktop!");
 
     }
 }

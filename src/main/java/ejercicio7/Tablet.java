@@ -1,18 +1,17 @@
 package ejercicio7;
 
-public class Laptop implements IComputadora{
+public class Tablet implements IComputadora{
 
     private String marca;
     private String modelo;
     private String procesador;
     private String sistemaOperativo;
     private TiposDeSize size;
-
     private Persona owner;
 
 
 
-    public Laptop(String marca, String modelo, String procesador, String sistemaOperativo, TiposDeSize size, Persona owner) {
+    public Tablet(String marca, String modelo, String procesador, String sistemaOperativo, TiposDeSize size, Persona owner) {
         this.marca = marca;
         this.modelo = modelo;
         this.procesador = procesador;
@@ -72,7 +71,7 @@ public class Laptop implements IComputadora{
     @Override
     public void recibirReparacion(IServicioTecnico servicioTecnico) {
 
-
+        servicioTecnico.repararComputadora(this);
 
 
     }
