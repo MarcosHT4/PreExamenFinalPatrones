@@ -14,10 +14,13 @@ public class ServicioTecnico implements IServicioTecnico {
 
             case SMALL:
                 costo = 10;
+                break;
             case MEDIUM:
                 costo = 20;
+                break;
             case BIG:
                 costo = 30;
+                break;
 
         }
 
@@ -47,10 +50,13 @@ public class ServicioTecnico implements IServicioTecnico {
 
             case SMALL:
                 costo = 50;
+                break;
             case MEDIUM:
                 costo = 60;
+                break;
             case BIG:
                 costo = 70;
+                break;
 
         }
 
@@ -82,10 +88,13 @@ public class ServicioTecnico implements IServicioTecnico {
 
             case SMALL:
                 costo = 5;
+                break;
             case MEDIUM:
                 costo = 10;
+                break;
             case BIG:
                 costo = 50;
+                break;
 
         }
 
